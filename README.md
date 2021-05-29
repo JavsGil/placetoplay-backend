@@ -1,6 +1,6 @@
 ## `Requerimientos Placetopay-back`
 
-- Implementacion en Laravel 8
+- Implementación en Laravel 8
 
 - Instalar php7.2 o superior en caso de no tenerlo instalado.
 
