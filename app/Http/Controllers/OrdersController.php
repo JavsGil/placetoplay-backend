@@ -85,7 +85,7 @@ class OrdersController extends Controller
                     break;
 
                 case 'REJECTED':
-                    Order::where(['id' => $request['reference'], 'status' => 'CREATED'])->update(['status' => 'REJECTED”']);
+                    Order::where(['id' => $request['reference'], 'status' => 'CREATED'])->update(['status' => 'REJECTED']);
                     break;
 
                 default:
