@@ -52,7 +52,7 @@ class OrdersTest extends TestCase
 
     public function test_retrying_payment_order()
     {
-         Order::where(['id'=>2,'status'=>'REJECTED”'])->update(['status' => 'PAYED']);
+         Order::where(['id'=>2,'status'=>'REJECTED'])->update(['status' => 'PAYED']);
          $order_resume = Order::where(['id'=>2,'status'=>'PAYED'])->get();
          if ($order_resume){
             $this->assertTrue(true);
@@ -61,7 +61,7 @@ class OrdersTest extends TestCase
 
     public function get_order_by_client()
     {
-         $order_resume = Order::where('customer_name','asda')
+         $order_resume = Order::where('customer_name','test1')
          ->orderBy('id','desc')
          ->get();
          if ($order_resume){

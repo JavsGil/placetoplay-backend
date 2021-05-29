@@ -78,14 +78,14 @@ class OrdersController extends Controller
             $status =  response()->json($trans->original->status->status);
 
             switch ($status) {
-                case 'PAYED':
+                case 'APPROVED':
                     Order::where(['id' => $request['reference'], 'status' => 'CREATED'])
-                        ->Orwhere(['id' => $request['reference'], 'status' => 'REJECT'])
+                        ->Orwhere(['id' => $request['reference'], 'status' => 'REJECTED'])
                         ->update(['status' => 'PAYED']);
                     break;
 
-                case 'REJECT':
-                    Order::where(['id' => $request['reference'], 'status' => 'CREATED'])->update(['status' => 'REJECT']);
+                case 'REJECTED':
+                    Order::where(['id' => $request['reference'], 'status' => 'CREATED'])->update(['status' => 'REJECTED”']);
                     break;
 
                 default:
