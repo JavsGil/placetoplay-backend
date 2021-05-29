@@ -4,11 +4,18 @@
 
 - Instalar php7.2 o superior en caso de no tenerlo instalado.
 
-- Descarge el backend debe dirigirse a la carpeta del projecto y haga `composer install` para obtener los paquetes necesarios.
+- Descarge el backend debe dirigirse a la carpeta del projecto y haga `composer install` para   
+  obtener los paquetes necesarios.
+
+- Asgine `user` y `password` para su entorno de base datos en caso de tenerlo en su `.env`
+
+- Cree una base datos `stores` en su `.env`
+
+- Ejecute `php artisan migrate` para correr la migracion
 
 - Dirigase a la carpeta del projecto y haga `php artisan serve` para levantarlo.
 
-- Ejecute los `Test` necesarios para validar que todo funciona correctamente.
+- Ejecute los `test` necesarios para validar que todo funciona correctamente.
 
 ## `Nota` 
 
