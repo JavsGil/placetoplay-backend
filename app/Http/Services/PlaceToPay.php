@@ -9,7 +9,7 @@ class PlaceToPay implements PaymentGatewayInterface
 {
     public function PaymentGateway($datos):Object
     {
-        $time = strtotime('+20 minutes');
+        $time = strtotime('+5 minutes');
         $expire_time = date('c', $time);
         $login = '6dd490faf9cb87a9862245da41170ff2';
         $secretKey = '024h1IlD';
@@ -57,7 +57,7 @@ class PlaceToPay implements PaymentGatewayInterface
 
         return $auth;
     }
-    
+
     public function getPayment($reference, $description, $currency, $total):Object
     {
         $amount = new \stdClass;
